@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import rmitlogo from "../../img/rmit-logo.png";
 import judo from "../../img/judo.jpg";
+import rmitavatar from "../../img/rmit-avatar.jpg";
+import rmitbackground from "../../img/rmit-background.png";
 import updateinfobtn from "../../img/setting.svg"
 import msgbtn from "../../img/message.svg"
 import notificationbtn from "../../img/notification.svg"
@@ -106,9 +108,9 @@ class ProfileContainer extends React.Component {
                   </div>
                 </div>
                 <div className="control-block-button">
-                  <btn className="control-button"><img src={updateinfobtn}></img></btn>
-                  <btn className="control-button"><img src={msgbtn}></img></btn>
-                  <btn className="control-button"><img src={notificationbtn}></img></btn>
+                  <button className="control-button"><img src={updateinfobtn}></img></button>
+                  <button className="control-button"><img src={msgbtn}></img></button>
+                  <button className="control-button"><img src={notificationbtn}></img></button>
                 </div>
               </div>
             </div>
