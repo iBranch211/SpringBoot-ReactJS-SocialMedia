@@ -9,28 +9,9 @@ matrix:
 
     - language: node_js
       node_js:
-        - 10.16.3
-      sudo: required
-      services:
-          - xvfb
-      addons:
-        chrome: stable
-      before_install:
-        # starting a GUI to run tests, per https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI
-        - sudo apt-get install g++ build-essential
-        - "export DISPLAY=:99.0"
-        - "npm config set spin false"
-      before_script:
-        - "cd frontend/app"
-        - "rm -rf node_modules"
-        - sudo apt-get update
-        - sudo apt-get install -y libappindicator1 fonts-liberation
-        - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        - sudo dpkg -i google-chrome*.deb
-        - "npm install"
-        - "cd .. & cd .. & cd restful-web-services & nohup mvn spring-boot:run &""
-        - "sleep 5"
-      script: "cd .. & cd frontend/app & npm run wdio"
+        - 8.9.4
+      before_install: cd frontend/app
+      install: npm install
 
 notifications:
   slack: tomyumsept:PvqV1oTyYrS9OKT0hp2kH4TA
